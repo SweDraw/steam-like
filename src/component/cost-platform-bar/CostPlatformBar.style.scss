@@ -1,0 +1,6 @@
+@import "../../style-configuration/configuration";
+.info-bar{
+  color: $main__text-color;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,36 @@
+.main-slide{
+  //* Background color from slide
+  $slider__background:linear-gradient(to top left, rgb(144, 153, 181) 0%, rgb(68, 73, 141) 100%);
+  //* Color form text
+  $slider__color: white;
+  //* Sale background color
+  $sale-background__color: #0b8b04;
+  //* Cost background color
+  $cost-background__color: #363837;
+
+  margin: .5em 1em;
+
+  &__link{
+    display: block;
+    //display: flex;
+    //flex-direction: column;
+    padding: .5em;
+    background: $slider__background;
+    color: $slider__color;
+  }
+
+  .slide-info{
+    > * {
+      margin-top: .5em;
+    }
+    &__title{
+      font-size: 1.2em;
+    }
+    &__text{
+      font-family: 'Raleway', sans-serif;
+      font-size: .8em;
+    }
+
+  }
+
+}
