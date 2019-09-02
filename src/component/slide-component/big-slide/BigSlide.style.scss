@@ -1,0 +1,86 @@
+@import "../../../style-configuration/configuration";
+
+$bottom-bar__height: 2em;
+
+.big-slide {
+  //* Break point
+  $break_point:$laptop;
+  //* size of main image after break point
+  $main-image__width: 60%;
+
+  display: flex;
+  height: 100%;
+
+  margin: 0 .5em ;
+
+
+  //* Set image style from main image
+  &__main-image {
+    flex-basis: 100%;
+    @media (min-width: $break_point) {
+      flex-basis: $main-image__width;
+    }
+  }
+
+  //* Set style from additional information
+  .add-info {
+    display: none;
+    padding: .5em;
+
+    > * + * {
+      margin-top: .5em;
+    }
+
+    @media (min-width: $break_point) {
+      display: flex;
+      flex-basis: #{100% - $main-image__width};
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__title, &__subtitle {
+      color: $main__text-color;
+    }
+
+    //* Parameter form image in additional zone
+    .image-bar {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      //* group image parameter
+      &__pare {
+        display: flex;
+        flex-basis: 50%;
+        >*+*{
+          margin-left: .5em;
+        }
+      }
+      >*+*{
+        margin-top: .5em;
+      }
+
+      //* Image parameter in image bar
+      &__image {
+        opacity: .7;
+        flex-basis: 50%;
+        transition: all .5s;
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 1.5em;
+    }
+
+    &__subtitle {
+      font-size: 1.3em;
+    }
+
+    .platform{
+      font-size: 2em;
+    }
+  }
+}

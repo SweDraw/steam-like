@@ -1,0 +1,109 @@
+@import "../../style-configuration/configuration";
+.log-page{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+.log{
+
+  $section-background: #1a1f46;
+
+  background: $create-form__background;
+  color:  $main__text-color;
+  padding: 1em;
+  flex-grow: 1;
+  justify-content: center;
+
+
+
+  @media (max-width: $tablet) {
+    >*+*{
+      margin-top: 1em;
+    }
+  }
+  
+  @media (min-width: $tablet) {
+    display: flex;
+    >*+*{
+      margin-left: 1em;
+    }
+  }
+
+  //* Universal element
+  &__title{
+    font-size: 2em;
+  }
+  &__subtitle{
+    padding: .25em 0;
+  }
+  //* Main section
+  &__main{
+
+  }
+  //* Log-in section
+  &__form-section{
+    padding: .5em;
+    margin-bottom: .5em;
+    background-color: $section-background;
+    @media (min-width: $tablet) {
+      display: flex;
+      >*{
+        flex-basis: 50%;
+      }
+    }
+  }
+  &__log-in{
+    $border-parameter: 2px solid #2d7ce2;
+    padding: .5em;
+
+    @media (max-width: $tablet) {
+      border-bottom: $border-parameter;
+    }
+    @media (min-width: $tablet) {
+      border-right: $border-parameter;
+    }
+  }
+  &__form{
+
+  }
+  &__user-name, &__password{
+    margin-bottom: 1em;
+  }
+  &__log-to-account{
+    display: block;
+    background-color: #2d7ce2;
+    color: $main__text-color;
+    border: none;
+    padding: .5em;
+  }
+  //* Create section
+  &__create{
+    padding: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    >*+*{
+      margin-top: 1em;
+    }
+  }
+  &__account-form{
+    padding: .5em;
+    border: 1px solid black;
+    background-color: #2d7ce2;
+  }
+  //*Password check
+  &__password-check{
+    font-size: 1.2em;
+  }
+  //* Log list
+  &__why{
+    > article {
+      background: $section-background;
+      padding: 1em;
+    }
+  }
+  &__list{
+    list-style: circle;
+    padding-left: 2em;
+  }
+}

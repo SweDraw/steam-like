@@ -1,24 +1,52 @@
 import React from 'react';
-import './InfoBar.style.scss';
-import Cost, {CostProps} from "../../cost/Cost.component";
-import Platform, {PlatformProps} from "../../platform/Platform.component";
+import './CostPlatformBar.style.scss';
+import Cost, {CostProps} from "../cost/Cost.component";
+import Platform, {PlatformProps} from "../platform/Platform.component";
 
-export interface MainInfoBarProps {
+export interface CostPlatformBarProps{
   costParameter: CostProps;
   platformParameter: PlatformProps;
 }
 
-export interface InfoBarProps extends MainInfoBarProps{
+export const CostPlatformExample: CostPlatformBarProps[] = [
+  {
+    costParameter: {
+      valuate: '$',
+      sale: 15,
+      cost: 3
+    },
+    platformParameter: {
+      isWindowsSupport: true
+    }
+  },
+  {
+    costParameter:{
+      cost: 50,
+      valuate: 'Є'
+    },
+    platformParameter: {
+      isPSSupport: true,
+      isXBoxSupport: true
+    }
+  },
+  {
+    platformParameter: {
+      isPSSupport: true
+    }, costParameter:{
+      cost: 8,
+      valuate: 'грн',
+      sale: 85
+    }
+  }
+];
 
-}
-
-const InfoBar: React.FC<InfoBarProps> = ({costParameter,platformParameter}) => {
+const CostPlatformBar: React.FC<CostPlatformBarProps> = ({costParameter,platformParameter}) => {
   return (
-    <section className="info-bar">
+    <section className="cost-platform-bar">
       <Cost {...costParameter}/>
       <Platform {...platformParameter}/>
     </section>
   )
 };
 
-export default InfoBar;
+export default CostPlatformBar;

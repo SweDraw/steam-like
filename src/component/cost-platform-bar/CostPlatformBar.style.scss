@@ -1,6 +1,12 @@
 @import "../../style-configuration/configuration";
-.info-bar{
+.cost-platform-bar{
   color: $main__text-color;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $tablet) {
+    .platform{
+      display: none;
+    }
+  }
 }

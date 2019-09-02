@@ -1,0 +1,14 @@
+.list-item{
+
+  &__link {
+
+  }
+  &__icon{
+    margin-right: .5em;
+  }
+  &__button{
+    background-color: initial;
+    border: none;
+    color: inherit;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Image.style.scss';
 import Image from "./Image.component";
-import ImageParameter from "../../../interface/Image";
+import ImageParameter from "../../interface/Image";
 
 export interface AdaptiveImageProps extends ImageParameter{
 

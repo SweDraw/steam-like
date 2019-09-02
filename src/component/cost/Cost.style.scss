@@ -1,0 +1,81 @@
+@import "../../style-configuration/configuration";
+
+.cost {
+  //* Breack point
+  $break__point: $tablet;
+  //* padding from part cost
+  $padding__part: .35em;
+  //* space between part cost
+  $space-between__part: .25em;
+  //* background color cost
+  $cost__background: #1d1e1d;
+  //* sale background
+  $sale__background: #00c52f;
+
+
+  font-size: 0.85em;
+  padding-right: .25em;
+  display: inline-flex;
+  align-items: center;
+  background-color: $cost__background;
+
+  //*set space between part
+  > * + * {
+    margin-left: $space-between__part;
+  }
+
+  &__sale {
+    background-color: $sale__background;
+    font-weight: 600;
+  }
+
+  &__start {
+    font-size: 1.2em;
+    padding: .15em .25em;
+  }
+
+  //*If item have sale set parameter
+  &--sale &__start {
+    text-decoration: line-through;
+    opacity: .7;
+    font-size: .95em;
+    padding: 0;
+  }
+
+  &--sale &__with-sale, &__sale {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  &--hide {
+    @media (max-width: $tablet) {
+      font-size: .7em;
+      padding: $padding__part;
+      .cost--sale .cost__start,
+      .cost__sale {
+        display: none;
+      }
+    }
+
+    @media (min-width: $break__point) {
+      font-size: 1em;
+    }
+  }
+  //* Table adaptive behavior
+  &--table{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    >*{
+      width: 100%;
+      text-align: center;
+    }
+    >*+*{
+      margin-top: .25em;
+    }
+    &:not(.cost--sale){
+      padding: .25em;
+    }
+  }
+}

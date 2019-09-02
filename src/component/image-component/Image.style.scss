@@ -1,6 +1,8 @@
 .image {
+  display: block;
   &--adaptive {
     max-width: 100%;
-    height: auto;
+    //height: auto;
+    max-height: 100%;
   }
 }

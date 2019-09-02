@@ -1,28 +1,29 @@
 import React from 'react';
 import './TableItem.style.scss';
-import AdaptiveImage, {AdaptiveImageProps} from "../image-component/AdaptiveImage.component";
 import Platform, {PlatformProps} from "../platform/Platform.component";
+import Cost, {CostProps, CostType} from "../cost/Cost.component";
+import Image, {ImageProps} from "../image-component/Image.component";
 
 export interface TableItemProps {
-  imageParameter: AdaptiveImageProps;
+  imageParameter: ImageProps;
   genreList: string[],
   platforms: PlatformProps;
   title: string;
+  costParameters: CostProps;
 }
 
-const TableItem: React.FC<TableItemProps> = ({imageParameter,genreList,platforms,title}) => {
-
+const TableItem: React.FC<TableItemProps> = ({imageParameter, genreList, platforms, title, costParameters}) => {
   return (
     <article className="table-item">
-      <AdaptiveImage {...imageParameter}/>
+      <Image {...imageParameter}/>
       <div className="table-item__info">
         <p className="table-item__title">{title}</p>
         <Platform {...platforms}/>
-        <p className="table-info__genre">
+        <p className="table-item__genre">
           {genreList.map((genre: string) => `${genre} `)}
         </p>
       </div>
-      
+      <Cost adaptiveBehavior={CostType.Table} {...costParameters}/>
     </article>
   )
 };

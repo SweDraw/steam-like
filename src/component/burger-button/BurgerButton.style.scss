@@ -1,0 +1,44 @@
+$button__width: 1.5em;
+$button__height: 0.25em;
+$button__color: white;
+
+
+.burger-button{
+  width: $button__width * 1.75;
+  height: $button__height * 10;
+  span{
+    &, &:after, &:before{
+      width: $button__width;
+      height: $button__height;
+      background-color: $button__color;
+      display: block;
+      position: absolute;
+      border-radius: 5px;
+      transition: 0.5s all;
+    }
+    &:before, &:after{
+      content: '';
+    }
+    &:before{
+      transform: translateY(#{-2 * $button__height});
+    }
+    &:after{
+      transform: translateY(#{2 * $button__height});
+    }
+  }
+
+  &__active{
+    span {
+      &{
+        display: contents;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

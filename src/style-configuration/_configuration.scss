@@ -1,0 +1,35 @@
+$desktop: 1920px;
+$laptop: 1440px;
+$tablet: 768px;
+$phone: 320px;
+
+$main__background-color: #000034;
+$main__text-color: white;
+$create-form__background: linear-gradient(to right top, rgb(15, 45, 89) 0%, rgba(2,53,107,1) 100%);
+
+
+
+
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+}
+
+A {
+  text-decoration: none;
+  color: inherit;
+}
+
+UL{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+P{
+  padding: 0;
+  margin: 0;
+}

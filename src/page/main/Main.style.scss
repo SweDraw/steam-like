@@ -1,0 +1,17 @@
+.main-page {
+  background: rgb(0, 51, 77);
+  background-image: linear-gradient(to right, rgb(0, 51, 77) 0%, rgb(6, 33, 43) 100%);;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * + * {
+    margin-top: 3em;
+  }
+
+  .big-slider,
+  .slider {
+
+  }
+}

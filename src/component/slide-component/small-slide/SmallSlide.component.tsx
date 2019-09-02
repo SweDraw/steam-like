@@ -1,26 +1,47 @@
 import React from 'react';
 import './SmallSlide.style.scss';
 import AdaptiveImage, {AdaptiveImageProps} from "../../image-component/AdaptiveImage.component";
+import CostPlatformBar, {
+  CostPlatformBarProps,
+  CostPlatformExample
+} from "../../cost-platform-bar/CostPlatformBar.component";
+import {AoF, Rust, Skyrim, TwoPointHospital, Warframe} from "../../../interface/ImageSaveParameter";
 
 export interface SmallSlideProps {
   imageParameter: AdaptiveImageProps;
-  sale: number;
-  cost: number;
+  costPlatformParameter: CostPlatformBarProps;
 }
 
-const SmallSlide: React.FC<SmallSlideProps> = ({sale, cost, imageParameter}) => {
+export const SmallSlideExample: SmallSlideProps[] = [
+  {
+    imageParameter: Warframe,
+    costPlatformParameter: CostPlatformExample[0]
+  },
+  {
+    imageParameter: Rust,
+    costPlatformParameter: CostPlatformExample[1]
+  },
+  {
+    costPlatformParameter: CostPlatformExample[2],
+    imageParameter: AoF
+  },
+  {
+    imageParameter: Skyrim,
+    costPlatformParameter: CostPlatformExample[0]
+  },
+  {
+    costPlatformParameter: CostPlatformExample[1],
+    imageParameter: TwoPointHospital
+  }
+];
+
+
+const SmallSlide: React.FC<SmallSlideProps> = ({ imageParameter, costPlatformParameter}) => {
 
   return (
     <article className="small-slide">
-      <AdaptiveImage className={`small-slider__image`} {...imageParameter}/>
-      <article className="small-slide__cost">
-        {sale && <div className="small-slide__sale">{`-${sale}%`}</div>}
-        <div className="small-slide__full-cost">
-          {sale && <div className="small-slide__start-cost">{cost}</div>}
-          <div className="small-slide__end-cost">{sale ? (cost * sale) / 100 : cost}</div>
-        </div>
-      </article>
-
+      <AdaptiveImage className={`small-slide__image`} {...imageParameter}/>
+      <CostPlatformBar {...costPlatformParameter}/>
     </article>
   )
 };

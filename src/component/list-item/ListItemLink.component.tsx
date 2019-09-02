@@ -1,23 +1,28 @@
-import React from 'react';
-import './ListItemLink.style.scss';
-import { Link } from 'react-router-dom';
+import React, {ReactNode} from 'react';
+import './ListItem.style.scss';
+import ListItem, {ListItemProps} from "./ListItem.component";
+import {Link} from 'react-router-dom';
+import Icon, {IconsTypes} from "../icon/Icon.component";
 
-export interface ListItemProps {
-  iconClass:string;
-  hrefWay:string;
-  textInside:string;
-  className?:string;
+export interface ListItemLinkProps extends ListItemProps {
+  icon?: IconsTypes;
+  hrefWay: string;
+  children:ReactNode;
 }
 
-const ListItemLink: React.FC<ListItemProps> = ({textInside,hrefWay,iconClass, className}) => {
+export const isListItemLink = (element: any): element is ListItemLinkProps => {
+  return 'hrefWay' in element
+};
+
+const ListItemLink: React.FC<ListItemLinkProps> = ({children, hrefWay, icon, className}) => {
 
   return (
-    <li className={`list-item  ${className ? className : ''}`}>
+    <ListItem className={className}>
       <Link className="list-item__link" to={hrefWay}>
-        {iconClass && <i className={`list-item__icon ${iconClass}`}/>}
-        {textInside}
+        {icon && <Icon typeIcon={icon} />}
+        {children}
       </Link>
-    </li>
+    </ListItem>
   )
 };
 

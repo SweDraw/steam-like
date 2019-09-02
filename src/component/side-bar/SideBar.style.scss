@@ -1,0 +1,46 @@
+.side-bar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: flex;
+
+  &--active{
+    width: 100%;
+  }
+  &--active &__menu {
+    min-width: 250px;
+    max-width: 20vh;
+    padding: 1.5em 1em;
+    opacity: 1;
+  }
+  &--active &__hide {
+    background-color: rgba(0, 0, 0, .4);
+    flex-grow: 1;
+  }
+
+
+  &__menu {
+    background-color: #1d1e1d;
+    color: white;
+    overflow-x: hidden;
+    transition: .5s all;
+    opacity: 0;
+    //*  in small screen set 250 px in big is resizable
+    &--active {
+      min-width: 250px;
+      max-width: 20vh;
+    }
+  }
+
+
+  &__hide {
+    &--active {
+      background-color: rgba(0, 0, 0, .4);
+      flex-grow: 1;
+    }
+  }
+
+}

@@ -1,0 +1,41 @@
+@import "../../style-configuration/configuration";
+.table-item{
+  height: 5em;
+  color: $main__text-color;
+  background: #003d38;
+  max-width: 50em;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+
+  .image{
+   flex: 0 0 10em;
+  }
+
+  &__info{
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: .5em;
+  }
+  &__title{
+    font-size: 1.1em;
+  }
+  .platform , &__genre{
+    opacity: .7;
+  }
+
+  &__genre{
+    text-overflow: ellipsis;
+  }
+
+  .cost{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+}

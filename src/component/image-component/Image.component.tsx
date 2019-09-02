@@ -1,7 +1,7 @@
 import React from 'react';
 import './Image.style.scss';
-import {getSize} from "../../../interface/Size";
-import ImageParameter, {AdditionalImageParameter, srcSet} from "../../../interface/Image";
+import {getSize} from "../../interface/Size";
+import ImageParameter, {AdditionalImageParameter, getSrcImage, getSrcSetImage} from "../../interface/Image";
 
 /**
  * Image parameter props
@@ -15,7 +15,8 @@ const Image: React.FC<ImageProps> = ({imageNames, altText, size, isAdaptiveImage
     <img
       className={`image ${className}`}
       alt={altText}
-      srcSet={srcSet(imageNames)}
+      srcSet={getSrcSetImage(imageNames)}//* All another browser
+      src={getSrcImage(imageNames)}//* IE11 support way
       style={getSize(size, isAdaptiveImage)} //* Combine width and height
     />
   )

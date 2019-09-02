@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainSlider.style.scss';
-import MainSlide, {MainSlideProps} from "../../slider-component/main-slide/MainSlide.component";
 import Slider, {Settings} from "react-slick";
+import MainSlide, {MainSlideProps} from "../../slide-component/main-slide/MainSlide.component";
 
 export interface MainSliderProps {
   slides: MainSlideProps[];
@@ -17,8 +17,21 @@ const MainSlider: React.FC<MainSliderProps> = ({slides}) => {
     slidesToScroll: 1,
     arrows: false,
     lazyLoad:"progressive",
-   // autoplay: true,
-   // autoplaySpeed: 5000,
+
+    responsive:[
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 320,
+        settings:{
+          slidesToShow: 1
+        }
+      }
+    ]
   };
   return (
     <Slider className={'main-slider'} {...setting}>

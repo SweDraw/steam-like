@@ -1,0 +1,27 @@
+@import "../../../style-configuration/configuration";
+.small-slide {
+  padding: .5em;
+  margin: .5em;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(169, 228, 247, 1) 0%, rgba(15, 180, 231, 1) 100%);
+
+
+  @media ($phone) {
+    .cost{
+      font-size: .6em;
+    }
+  }
+
+  .cost{
+    font-size: .9em;
+  }
+  .platform{
+    font-size: 1.5em;
+  }
+  &__image {
+    margin-bottom: .5em;
+  }
+}

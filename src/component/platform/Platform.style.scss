@@ -1,0 +1,19 @@
+@import '../../style-configuration/configuration';
+
+.platform {
+
+  $break__point: $tablet;
+  font-size: 1.5em;
+
+  >*+*{
+    margin: .25em;
+  }
+
+  @media (min-width: $phone) {
+    font-size: 1.2em;
+  }
+
+  @media (min-width: $break__point) {
+    font-size: 1.4em;
+  }
+}

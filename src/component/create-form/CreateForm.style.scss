@@ -1,0 +1,61 @@
+@import "../../style-configuration/configuration";
+.create-form {
+  display: flex;
+  justify-content: center;
+  color: $main__text-color;
+  background: $create-form__background;
+
+  &__form {
+    padding: 1em;
+    max-width: 50em;
+
+    > * + * {
+      margin-top: 1.5em;
+    }
+  }
+
+  &__title {
+    font-size: 1.2em;
+    &--big-title{
+      font-size: 2em;
+    }
+  }
+
+  &__input {
+    max-width: 20em;
+    margin-bottom: .5em;
+  }
+
+  &__section {
+
+    > * + * {
+      margin-top: .5em;
+    }
+  }
+
+  &__rules {
+    font-size: .9em;
+    color: #ff0000f2;
+  }
+
+  &__select {
+    max-width: 50em;
+  }
+
+  &__agree {
+    font-size: 1.3em;
+  }
+
+  &__agree-politics{
+    max-width: 50em;
+    max-height: 20em;
+    overflow: auto;
+    margin: .75em 0;
+    border: 1px solid $main__text-color;
+    padding: .5em;
+  }
+
+  &__checkbox{
+    margin-right: .5em;
+  }
+}

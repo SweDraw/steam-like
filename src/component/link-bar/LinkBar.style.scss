@@ -1,0 +1,38 @@
+@import "../../style-configuration/configuration";
+
+.link-bar {
+  //* breack point
+  $break-point: $tablet;
+
+  width: 100%;
+
+  @media (max-width: $break-point) {
+    > * + * {
+      margin-top: .5em;
+    }
+  }
+
+  @media (min-width: $break-point) {
+    display: flex;
+  }
+
+
+  &__pair {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+
+    > * + * {
+      margin-left: .5em;
+    }
+  }
+
+  &__link {
+    flex-basis: 40%;
+    padding: 1.5em;
+    border-radius: .25em;
+    border: 1px solid #0b0b0b;
+    background-image: linear-gradient(to right bottom, #3d8afb, #00b6ff, #00d9fc, #00f2a4, #71ff17);
+  }
+}

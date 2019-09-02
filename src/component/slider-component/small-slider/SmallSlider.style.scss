@@ -1,0 +1,15 @@
+.small-slider{
+  width: 100%;
+  min-height: 10em;
+  height: 25vh;
+  .slick-track, .slick-list, .slick-slide div{
+    height: 100%;
+    padding: 0;
+  }
+  .slick-track{
+    width: 100%;
+  }
+  .slick-slide + .slick-slide {
+    margin: 0 .25em;
+  }
+}
