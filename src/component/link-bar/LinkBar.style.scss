@@ -30,9 +30,18 @@
 
   &__link {
     flex-basis: 40%;
-    padding: 1.5em;
+    padding: 1em;
     border-radius: .25em;
+    font-size: 1.5em;
+    color: teal;
     border: 1px solid #0b0b0b;
     background-image: linear-gradient(to right bottom, #3d8afb, #00b6ff, #00d9fc, #00f2a4, #71ff17);
+
+    transition: color .5s ease-in, 1.5s box-shadow ease-in-out;
+
+    &:hover{
+      color: white;
+      box-shadow: inset -.2em -.2em 1em .25em rgba(255, 255, 255, 0.6);
+    }
   }
 }

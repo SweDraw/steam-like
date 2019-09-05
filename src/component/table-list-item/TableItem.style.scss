@@ -2,11 +2,16 @@
 .table-item{
   height: 5em;
   color: $main__text-color;
-  background: #003d38;
-  max-width: 50em;
+  background-color: #157c99;
   position: relative;
   display: flex;
   overflow: hidden;
+
+  transition: background-color .5s ;
+
+  &:hover{
+    background-color: #2680ff;
+  }
 
   .image{
    flex: 0 0 10em;
@@ -18,7 +23,7 @@
     flex-shrink: 0;
     display: inline-flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: .5em;
   }
   &__title{
@@ -30,6 +35,20 @@
 
   &__genre{
     text-overflow: ellipsis;
+  }
+
+  .genre{
+    font-size: 1.1rem;
+    padding: .25em;
+    background-color: #1d74ff;
+    transition: .5s background-color;
+    &:hover{
+      background-color: #2620ff;
+    }
+  }
+
+  & .genre+ .genre {
+    margin-left: .25em;
   }
 
   .cost{

@@ -4,8 +4,6 @@ import Slider, {Settings} from "react-slick";
 import BigSlide, {BigSlideProps} from "../../slide-component/big-slide/BigSlide.component";
 import {AoF, ImageParameterSet, Rust, Skyrim, TwoPointHospital, Warframe} from "../../../interface/ImageSaveParameter";
 
-
-
 export const bigSlideParameter:BigSlideProps = {
   mainImageParameter:ImageParameterSet(true, Warframe),
   costPlatformParameters:{

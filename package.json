@@ -2,6 +2,7 @@
   "name": "final",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://swedraw.github.io/steam-like/",
   "dependencies": {
     "@types/jest": "24.0.18",
     "@types/node": "12.7.2",
@@ -10,6 +11,7 @@
     "@types/react-router": "^5.0.3",
     "@types/react-router-dom": "^4.3.5",
     "@types/react-slick": "^0.23.4",
+    "gh-pages": "^2.1.1",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -23,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "yarn build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

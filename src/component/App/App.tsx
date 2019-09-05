@@ -7,7 +7,8 @@ import LogInPage from "../../page/log-in/LogInPage.component";
 import {Route, Switch} from "react-router";
 import CreatePage from "../../page/create-page/CreatePage.component";
 import GameSearchBar from "../../page/game-search-bar/GamePage.component";
-import IndividualGamePage from "../../page/individual-game-search-bar/IndividualGamePage.component";
+import Footer from "../footer/Footer.component";
+import GamePage from "../../page/game/GamePage.component";
 
 const App: React.FC = () => {
   return (
@@ -20,8 +21,9 @@ const App: React.FC = () => {
           <Route path={'/log'} component={LogInPage}/>
           <Route path={'/create'} component={CreatePage}/>
           <Route path={'/category'} component={GameSearchBar}/>
-          <Route path={'/game'} component={IndividualGamePage}/>
+          <Route path={'/game'} component={GamePage}/>
         </Switch>
+        <Footer/>
       </div>
     </>
   );

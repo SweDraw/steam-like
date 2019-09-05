@@ -10,9 +10,17 @@
 
   &--active{
     width: 100%;
-
+    display: flex;
     .side-nav{
-
+      width: 15rem;
+      @media (min-width: 768px) {
+        width: 20rem;
+        font-size: 2rem;
+      }
+    }
+    #{$this}__hide{
+      flex-grow: 1;
+      background-color: rgba(#000e1d,.5);
     }
   }
 }

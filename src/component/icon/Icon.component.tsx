@@ -12,7 +12,9 @@ export enum IconsTypes {
   SingIn = 'fas fa-sign-in-alt',
   User = 'fas fa-user',
   Check = 'fas fa-check',
-  ArrowTop = 'fas fa-arrow-alt-up'
+  ArrowTop = 'fas fa-arrow-alt-up',
+  Users = 'fas fa-users',
+  Friend = 'fas fa-user-friends',
 }
 
 const Icon: React.FC<IconProps> = ({typeIcon}) => {

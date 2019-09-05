@@ -1,0 +1,26 @@
+.footer{
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: .5em;
+
+  background-color: #68c1ff;
+
+  &__text{
+    display: flex;
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    >*{
+      color: white;
+    }
+
+    > *+*{
+      margin-left: .5em;
+      padding-left: 3px;
+    }
+  }
+}

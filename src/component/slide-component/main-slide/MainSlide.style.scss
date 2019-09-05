@@ -17,6 +17,10 @@
     padding: .5em;
     background: $slider__background;
     color: $slider__color;
+    transition: .5s all;
+    &:hover{
+      background: linear-gradient(to top left, rgb(18, 189, 255) 0%, rgb(44, 44, 89) 100%);
+    }
   }
 
   .slide-info{

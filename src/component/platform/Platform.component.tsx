@@ -1,6 +1,7 @@
 import React from 'react';
 import './Platform.style.scss';
 import Icon, {IconsTypes} from "../icon/Icon.component";
+import {Link} from "react-router-dom";
 
 export interface PlatformProps {
   isWindowsSupport?: boolean;
@@ -12,9 +13,9 @@ const Platform: React.FC<PlatformProps> = ({isPSSupport,isWindowsSupport,isXBoxS
 
   return (
     <section className="platform">
-      {isWindowsSupport && <Icon typeIcon={IconsTypes.Windows}/>}
-      {isPSSupport && <Icon typeIcon={IconsTypes.PS}/>}
-      {isXBoxSupport && <Icon typeIcon={IconsTypes.XBox}/>}
+      {isWindowsSupport && <Link to={'/windows'}><Icon typeIcon={IconsTypes.Windows}/></Link>}
+      {isPSSupport && <Link to={'/play'}><Icon typeIcon={IconsTypes.PS}/></Link>}
+      {isXBoxSupport && <Link to={'/xbox'}><Icon typeIcon={IconsTypes.XBox}/></Link>}
     </section>
   )
 };

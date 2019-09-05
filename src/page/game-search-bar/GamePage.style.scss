@@ -1,7 +1,10 @@
 @import "../../style-configuration/configuration";
 .game-search-bar {
   background: $create-form__background;
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   >*+*{
     margin-top: .5em;
   }

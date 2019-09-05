@@ -6,6 +6,8 @@ import LinkBar, {ExampleLinkBarParameter} from "../../component/link-bar/LinkBar
 import SmallSlider from "../../component/slider-component/small-slider/SmallSlider.component";
 import SmallSlideExample from "../../component/slider-component/small-slider/SmallSlideExample";
 import MainSlideExample from "../../component/slide-component/main-slide/MainSlideExample";
+import Video from "../../component/video-component/video/Video.component";
+import LazyLoadVideo from "../../component/video-component/lazy-load-video/LazyLoadVideo.component";
 
 export interface MainProps {
 
@@ -14,6 +16,15 @@ export interface MainProps {
 const Main: React.FC<MainProps> = () => {
   return (
     <div className="main-page">
+      <LazyLoadVideo
+        hrefOnVideo={'/game'}
+        videoName={'webm_page_bg_russian.webm'}
+        isMute={true}
+        isInfinite={true}
+        isAdaptiveVideo={true}
+        isAutoplay={true}
+        loadText={'Video load'}
+      />
       <BigSlider slides={
         [
           bigSlideParameter,
@@ -32,7 +43,7 @@ const Main: React.FC<MainProps> = () => {
       ]}
       />
       <LinkBar links={ExampleLinkBarParameter}/>
-      <SmallSlider slides={[...SmallSlideExample,...SmallSlideExample]}/>
+      <SmallSlider slides={[...SmallSlideExample, ...SmallSlideExample]}/>
     </div>
   )
 };

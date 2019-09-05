@@ -22,7 +22,7 @@ const ListItemLink: React.FC<ListItemLinkProps> = ({text, hrefWay, icon, classNa
     <ListItem className={getNotUndefinedString(className)}>
       <Link className={`list-item--link`} to={hrefWay}>
         {icon && <Icon typeIcon={icon} />}
-        {text}
+        <span className="list-item__text">{text}</span>
       </Link>
     </ListItem>
   )

@@ -12,7 +12,7 @@ const SmallSlider: React.FC<SmallSliderProps> = ({slides}) => {
   const sliderParameter: SliderSettings = {
     arrows: false,
     slidesToScroll: 1,
-    slidesToShow: 3,
+    slidesToShow: 5,
     centerMode: true,
     lazyLoad: "progressive",
     dots: false,
@@ -29,6 +29,18 @@ const SmallSlider: React.FC<SmallSliderProps> = ({slides}) => {
         breakpoint: 768,
         settings: {
           slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 1020,
+        settings:{
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 4
         }
       }
     ]

@@ -1,5 +1,10 @@
 .table-list{
-  >*+*{
+  max-width: 50em;
+  padding-bottom: .5em;
+  &__item{
+    display: block;
+  }
+  &__item + &__item{
     margin-top: .5em;
   }
 }

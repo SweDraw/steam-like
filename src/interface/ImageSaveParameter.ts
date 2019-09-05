@@ -62,3 +62,5 @@ export const AoF: AdaptiveImageProps = {
     desktop: 'AoF__1920.jpg'
   }
 };
+
+export const ImageSet: AdaptiveImageProps[] = [Warframe,TwoPointHospital,Rust,AoF,Skyrim];

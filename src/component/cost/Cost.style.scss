@@ -15,9 +15,14 @@
 
   font-size: 0.85em;
   padding-right: .25em;
+  height:  fit-content;
   display: inline-flex;
   align-items: center;
   background-color: $cost__background;
+
+  >* {
+    padding: .1em;
+  }
 
   //*set space between part
   > * + * {
@@ -48,10 +53,8 @@
   }
 
   &--hide {
-    > * + * {
-      margin-left: 0;
-    }
     @media (max-width: $tablet) {
+
       font-size: .7em;
       padding: .15em .25em;
       &.cost--sale .cost__start,
@@ -60,6 +63,10 @@
       }
       .cost__start{
         padding: 0;
+      }
+
+      > * + * {
+        margin-left: 0;
       }
     }
 

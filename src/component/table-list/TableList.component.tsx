@@ -10,7 +10,14 @@ const TableList: React.FC<TableListProps> = ({tableListParameter}) => {
 
   return (
     <section className="table-list">
-      {tableListParameter.map((tableItem:TableItemProps, index: number) => <TableItem key={index} {...tableItem}/>)}
+      {tableListParameter.map(
+        (tableItem:TableItemProps, index: number) =>
+          <TableItem
+            key={index}
+            className={'table-list__item'}
+            {...tableItem}
+          />)
+      }
     </section>
   )
 };

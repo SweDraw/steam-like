@@ -4,15 +4,11 @@ $slider__max-height: 50vh;
 .big-slider {
   $break__point: $tablet;
 
-
-  //max-width: 75em;
   padding: .5em;
   border: .25em linen solid;
-
   width: 100%;
 
-  @media (min-width: $break__point) {
-    //height: unset;
+  @media (min-width: $tablet) {
     height: 70vh;
   }
 

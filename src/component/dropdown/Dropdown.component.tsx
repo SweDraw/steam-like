@@ -1,6 +1,6 @@
 import React from 'react';
 import './Dropdown.style.scss';
-import Button, {ButtonMouseEvent} from "../button/Button.component";
+import Button, {ButtonMouseEvent, ButtonType} from "../button/Button.component";
 import List from "../list/List.component";
 import Icon, {IconsTypes} from "../icon/Icon.component";
 import {DropdownItemProps} from "./DropdownItem";
@@ -37,6 +37,7 @@ const Dropdown: React.FC<DropdownProps> = ({listLink,headerText, typeDropdown}) 
       <Button
         className={`dropdown__button`}
         handleClick={dropdown}
+        buttonType={ButtonType.NOtBorder}
       >
         {headerText}<Icon typeIcon={IconsTypes.ArrowTop}/>
       </Button>

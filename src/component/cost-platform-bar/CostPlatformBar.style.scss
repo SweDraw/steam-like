@@ -3,6 +3,8 @@
   color: $main__text-color;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: fit-content;
 
   @media (max-width: $tablet) {
     .platform{
