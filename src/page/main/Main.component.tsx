@@ -7,6 +7,8 @@ import SmallSlider from "../../component/slider-component/small-slider/SmallSlid
 import SmallSlideExample from "../../component/slider-component/small-slider/SmallSlideExample";
 import MainSlideExample from "../../component/slide-component/main-slide/MainSlideExample";
 import LazyLoadVideo from "../../component/video-component/lazy-load-video/LazyLoadVideo.component";
+import TableListItemExample from "../../component/table-list-item/TableListExample";
+import TableList from "../../component/table-list/TableList.component";
 
 export interface MainProps {
 
@@ -42,6 +44,8 @@ const Main: React.FC<MainProps> = () => {
       ]}
       />
       <LinkBar links={ExampleLinkBarParameter}/>
+      <SmallSlider slides={[...SmallSlideExample, ...SmallSlideExample]}/>
+      <TableList className={'main-page__table'} tableListParameter={[...TableListItemExample,...TableListItemExample]}/>
       <SmallSlider slides={[...SmallSlideExample, ...SmallSlideExample]}/>
     </div>
   )
