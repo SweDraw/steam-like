@@ -6,7 +6,6 @@ import LinkBar, {ExampleLinkBarParameter} from "../../component/link-bar/LinkBar
 import SmallSlider from "../../component/slider-component/small-slider/SmallSlider.component";
 import SmallSlideExample from "../../component/slider-component/small-slider/SmallSlideExample";
 import MainSlideExample from "../../component/slide-component/main-slide/MainSlideExample";
-import Video from "../../component/video-component/video/Video.component";
 import LazyLoadVideo from "../../component/video-component/lazy-load-video/LazyLoadVideo.component";
 
 export interface MainProps {
