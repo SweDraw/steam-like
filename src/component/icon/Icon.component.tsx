@@ -11,11 +11,12 @@ export enum IconsTypes {
   XBox = 'fab fa-xbox',
   SingIn = 'fas fa-sign-in-alt',
   User = 'fas fa-user',
-  Check = 'fas fa-check'
+  Check = 'fas fa-check',
+  ArrowTop = 'fas fa-arrow-alt-up'
 }
 
 const Icon: React.FC<IconProps> = ({typeIcon}) => {
-  return (<i className={typeIcon}/>)
+  return (<i className={`icon ${typeIcon}`}/>)
 };
 
 export default Icon;

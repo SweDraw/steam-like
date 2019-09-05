@@ -1,51 +1,37 @@
-import React from 'react';
+import React, {MouseEvent as ReactMouseEvent} from 'react';
 import './SideBar.style.scss';
-import List from "../list/List.component";
 import {ButtonMouseEvent} from "../button/Button.component";
-import {ListItemLinkProps} from "../list-item/ListItemLink.component";
-import {IconsTypes} from "../icon/Icon.component";
+import Dropdown from "../dropdown/Dropdown.component";
+import DropdownExample from "../dropdown/DropdownExample";
+import SideNav from "../side-nav/SideNav.component";
 
 export interface SideBarProps {
-  className?: string;
+
 }
-const SideBarClass = 'side-bar';
-const SideBarActiveClass = 'side-bar--active';
 
 
-const SideBarListItems: ListItemLinkProps[] = [
-  {
-    icon: IconsTypes.SingIn,
-    hrefWay: '/log',
-    children: 'Sign in'
-  },
-  {
-    icon: IconsTypes.User,
-    children: 'Socio',
-    hrefWay: '/socio'
-  }
-];
-
-export const openSideBar = (event:ButtonMouseEvent): void =>{
+export const openSideBar = (event: ButtonMouseEvent): void => {
   event.preventDefault();
   event.stopPropagation();
   //* Class get form SideBar(default value) component class
-  const sideBar:HTMLElement = document.querySelector(`.${SideBarClass}`) as HTMLElement;
-  sideBar.classList.add(SideBarActiveClass);
+  const sideBar: HTMLElement = document.getElementsByClassName('side-bar')[0] as HTMLElement;
+  console.log(sideBar);
+  sideBar.classList.add('side-bar--active');
 };
 
-export const hideSideBar = (event:ButtonMouseEvent):void => {
+export const hideSideBar = (event: ReactMouseEvent<HTMLDivElement, MouseEvent>): void => {
   event.preventDefault();
   event.stopPropagation();
   //* Class get form SideBar(default value) component class
-  const sideBar:HTMLElement = document.querySelector(`.${SideBarClass}`) as HTMLElement;
-  sideBar.classList.remove(SideBarActiveClass);
+  const sideBar: HTMLElement = document.getElementsByClassName('side-bar')[0] as HTMLElement;
+  console.log(sideBar);
+  sideBar.classList.remove('side-bar--active');
 };
 
-const SideBar: React.FC<SideBarProps> = ({className}) => {
-
+const SideBar: React.FC<SideBarProps> = () => {
   return (
-    <section className={`${SideBarClass} ${className ? className : ''}`}>
-      <List listItems={[...SideBarListItems]} className={`side-bar__menu`}/>
+    <section className={`side-bar`}>
+      <SideNav navItems={[...DropdownExample]}/>
       <div className={'side-bar__hide'} onClick={hideSideBar}/>
     </section>
   )

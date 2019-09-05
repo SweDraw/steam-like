@@ -1,7 +1,7 @@
 import React, {MouseEvent as ReactMouseEvent} from 'react';
 import './Button.style.scss';
 
-export type ButtonMouseEvent = ReactMouseEvent<HTMLElement,MouseEvent>;
+export type ButtonMouseEvent = ReactMouseEvent<HTMLButtonElement,MouseEvent>;
 
 export interface ButtonProps {
   handleClick(event: ButtonMouseEvent):void;

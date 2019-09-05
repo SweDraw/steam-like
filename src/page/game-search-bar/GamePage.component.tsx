@@ -1,22 +1,22 @@
 import React from 'react';
 import './GamePage.style.scss';
 import SmallSlider from "../../component/slider-component/small-slider/SmallSlider.component";
-import {SmallSlideExample} from "../../component/slide-component/small-slide/SmallSlide.component";
 import TableList from "../../component/table-list/TableList.component";
 import TableListItemExample from "../../component/table-list-item/TableListExample";
+import SmallSlideExample from "../../component/slider-component/small-slider/SmallSlideExample";
 
 export interface GamePageProps {
 
 }
 
-const GamePage: React.FC<GamePageProps> = () => {
+const GameSearchBar: React.FC<GamePageProps> = () => {
 
   return (
-    <section className="game-page">
+    <section className="game-search-bar">
       <SmallSlider slides={[...SmallSlideExample, ...SmallSlideExample]}/>
       <TableList tableListParameter={[...TableListItemExample,...TableListItemExample,...TableListItemExample,...TableListItemExample,...TableListItemExample]}/>
     </section>
   )
 };
 
-export default GamePage;
+export default GameSearchBar;

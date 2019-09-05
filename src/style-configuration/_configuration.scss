@@ -5,16 +5,15 @@ $phone: 320px;
 
 $main__background-color: #000034;
 $main__text-color: white;
-$create-form__background: linear-gradient(to right top, rgb(15, 45, 89) 0%, rgba(2,53,107,1) 100%);
+$create-form__background: linear-gradient(to right top, rgb(12, 24, 47), rgb(0, 8, 20));
 
-
-
-
-
-*,
-*:after,
-*:before {
+:root{
+  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
   min-height: 0;
   min-width: 0;
 }
@@ -24,12 +23,13 @@ A {
   color: inherit;
 }
 
-UL{
+UL {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-P{
+
+P {
   padding: 0;
   margin: 0;
 }

@@ -48,12 +48,18 @@
   }
 
   &--hide {
+    > * + * {
+      margin-left: 0;
+    }
     @media (max-width: $tablet) {
       font-size: .7em;
-      padding: $padding__part;
-      .cost--sale .cost__start,
+      padding: .15em .25em;
+      &.cost--sale .cost__start,
       .cost__sale {
         display: none;
+      }
+      .cost__start{
+        padding: 0;
       }
     }
 

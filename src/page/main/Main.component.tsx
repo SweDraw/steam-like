@@ -2,18 +2,16 @@ import React from 'react';
 import './Main.style.scss';
 import BigSlider, {bigSlideParameter} from "../../component/slider-component/big-slider/BigSlider.component";
 import MainSlider from "../../component/slider-component/main-slider/MainSlider.component";
-import {MainSlideExemple} from "../../component/slide-component/main-slide/MainSlide.component";
 import LinkBar, {ExampleLinkBarParameter} from "../../component/link-bar/LinkBar.component";
 import SmallSlider from "../../component/slider-component/small-slider/SmallSlider.component";
-import {SmallSlideExample} from "../../component/slide-component/small-slide/SmallSlide.component";
+import SmallSlideExample from "../../component/slider-component/small-slider/SmallSlideExample";
+import MainSlideExample from "../../component/slide-component/main-slide/MainSlideExample";
 
 export interface MainProps {
 
 }
 
-
 const Main: React.FC<MainProps> = () => {
-
   return (
     <div className="main-page">
       <BigSlider slides={
@@ -29,8 +27,8 @@ const Main: React.FC<MainProps> = () => {
         ]
       }/>
       <MainSlider slides={[
-        ...MainSlideExemple,
-        MainSlideExemple[3]
+        ...MainSlideExample,
+        MainSlideExample[3]
       ]}
       />
       <LinkBar links={ExampleLinkBarParameter}/>
@@ -38,5 +36,4 @@ const Main: React.FC<MainProps> = () => {
     </div>
   )
 };
-
 export default Main;

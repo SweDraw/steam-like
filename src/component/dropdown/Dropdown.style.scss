@@ -1,0 +1,42 @@
+@import "../../style-configuration/configuration";
+.dropdown {
+  $this: &;
+
+  &--active {
+    #{$this}--list {
+      background-color: #0f4e82;
+
+      #{$this}__button {
+
+      }
+      #{$this}__list {
+
+      }
+    }
+
+    #{$this}--menu{
+
+    }
+  }
+
+  &__button, &__list, &__item{
+    width: 100%;
+    color: $main__text-color;
+  }
+
+
+  &__button {
+    background-color: #151414;
+    padding: 0.25em 1em;
+    text-align: left;
+  }
+
+  &__list {
+    height: 0;
+    overflow: hidden;
+  }
+
+  .icon{
+    text-align: right;
+  }
+}

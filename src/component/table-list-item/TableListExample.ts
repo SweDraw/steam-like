@@ -1,9 +1,10 @@
 import {AoF, Rust, Skyrim, TwoPointHospital, Warframe} from "../../interface/ImageSaveParameter";
-import {GenreList} from "../../interface/Genre";
 import {TableItemProps} from "./TableItem.component";
+import GenreList from "../../interface/Genre";
 
 const TableListItemExample: TableItemProps[] = [
   {
+    idGame: 1,
     title: Warframe.altText,
     genreList: [GenreList[0], GenreList[11]],
     platforms: {
@@ -22,6 +23,7 @@ const TableListItemExample: TableItemProps[] = [
     }
   },
   {
+    idGame: 2,
     title: Skyrim.altText,
     genreList: [GenreList[0], GenreList[11], GenreList[21], GenreList[13], GenreList[27], GenreList[27], GenreList[27], GenreList[27], GenreList[27]],
     platforms: {
@@ -40,6 +42,7 @@ const TableListItemExample: TableItemProps[] = [
     }
   },
   {
+    idGame: 3,
     title: AoF.altText,
     genreList: [GenreList[0], GenreList[8], GenreList[24], GenreList[10], GenreList[7]],
     platforms: {
@@ -58,6 +61,7 @@ const TableListItemExample: TableItemProps[] = [
     }
   },
   {
+    idGame: 4,
     title: Rust.altText,
     genreList: [GenreList[5], GenreList[3], GenreList[4], GenreList[9], GenreList[7]],
     platforms: {
@@ -75,6 +79,7 @@ const TableListItemExample: TableItemProps[] = [
     }
   },
   {
+    idGame: 5,
     title: TwoPointHospital.altText,
     genreList: [GenreList[4], GenreList[31], GenreList[18], GenreList[9], GenreList[17]],
     platforms: {

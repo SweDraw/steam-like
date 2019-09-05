@@ -1,6 +1,6 @@
 import React from 'react';
 import './CostPlatformBar.style.scss';
-import Cost, {CostProps} from "../cost/Cost.component";
+import Cost, {CostProps, CostType} from "../cost/Cost.component";
 import Platform, {PlatformProps} from "../platform/Platform.component";
 
 export interface CostPlatformBarProps{
@@ -43,7 +43,7 @@ export const CostPlatformExample: CostPlatformBarProps[] = [
 const CostPlatformBar: React.FC<CostPlatformBarProps> = ({costParameter,platformParameter}) => {
   return (
     <section className="cost-platform-bar">
-      <Cost {...costParameter}/>
+      <Cost adaptiveBehavior={CostType.Hide} {...costParameter}/>
       <Platform {...platformParameter}/>
     </section>
   )

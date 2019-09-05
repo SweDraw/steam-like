@@ -1,4 +1,4 @@
-export const GenreList: string[]= [
+const GenreList: string[]= [
   'Platformer',
   'Shooter',
   'Fighting',
@@ -45,3 +45,14 @@ export const GenreList: string[]= [
   'Advergame',
   'Educational game'
 ];
+
+export const getRandomGenre = (numberOfGenre: number) => {
+  let genreList: string[] = [];
+  for (let i = 0; i < numberOfGenre; i++) {
+    genreList[i] = GenreList[Math.floor(Math.random() * GenreList.length)];
+  }
+  console.log(genreList);
+  return genreList;
+};
+
+export default GenreList;

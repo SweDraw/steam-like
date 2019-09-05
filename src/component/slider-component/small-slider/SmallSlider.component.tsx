@@ -8,37 +8,35 @@ export interface SmallSliderProps {
 }
 
 const SmallSlider: React.FC<SmallSliderProps> = ({slides}) => {
-
-  const sliderParameter:SliderSettings = {
+  //* Setting from slider
+  const sliderParameter: SliderSettings = {
     arrows: false,
     slidesToScroll: 1,
-    slidesToShow: 4,
+    slidesToShow: 3,
     centerMode: true,
-    lazyLoad:"progressive",
+    lazyLoad: "progressive",
     dots: false,
     speed: 1000,
     draggable: true,
-    responsive:[
+    responsive: [
       {
-        breakpoint: 320,
-        settings:{
+        breakpoint: 500,
+        settings: {
           slidesToShow: 1
         }
       },
       {
         breakpoint: 768,
-        settings:{
+        settings: {
           slidesToShow: 2
         }
       }
     ]
   };
-
+  //* Slider
   return (
     <Slider className="small-slider" {...sliderParameter}>
-      {slides.map((slide: SmallSlideProps, index: number) =>
-        <SmallSlide key={index} {...slide}/>
-      )}
+      {slides.map((slide: SmallSlideProps, index: number) => <SmallSlide key={index} {...slide}/>)}
     </Slider>
   )
 };
