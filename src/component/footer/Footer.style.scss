@@ -1,9 +1,21 @@
 .footer{
-  height: 5rem;
+
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   padding: .5em;
+  @media(min-width: 500px){
+    flex-direction: row;
+    height: 5rem;
+  }
+
+  .logo{
+    height: 5em !important;
+    @media (min-width: 500px) {
+     height: unset;
+    }
+  }
 
   background-color: #68c1ff;
 

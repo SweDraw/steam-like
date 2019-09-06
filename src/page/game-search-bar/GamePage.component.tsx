@@ -14,7 +14,7 @@ const GameSearchBar: React.FC<GamePageProps> = () => {
   return (
     <section className="game-search-bar">
       <SmallSlider slides={[...SmallSlideExample, ...SmallSlideExample]}/>
-      <TableList tableListParameter={[...TableListItemExample,...TableListItemExample,...TableListItemExample,...TableListItemExample,...TableListItemExample]}/>
+      <TableList className={'game-search-bar__table-list'} tableListParameter={[...TableListItemExample,...TableListItemExample,...TableListItemExample,...TableListItemExample,...TableListItemExample]}/>
     </section>
   )
 };

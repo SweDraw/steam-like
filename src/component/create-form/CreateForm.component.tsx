@@ -293,9 +293,8 @@ const CreateForm: React.FC<CreateFormProps> = () => {
         </article>
         <hr/>
         <article className="create-form__field create-form__field--agree">
-          <p className="create-form__title">List of agree rules</p>
           <div id="create-form__agree-politics">
-            <h3>СОГЛАШЕНИЕ ПОДПИСЧИКА STEAM®</h3><br/>
+            <h3>СОГЛАШЕНИЕ ПОДПИСЧИКА</h3><br/>
             <p id='0'>Содержание:
             </p>
             <ol style={{marginLeft: 13}}>

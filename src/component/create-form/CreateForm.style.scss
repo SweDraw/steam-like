@@ -22,7 +22,7 @@
   }
 
   &__input {
-    max-width: 20em;
+    width: 18rem;
     margin-bottom: .5em;
   }
 
@@ -46,7 +46,7 @@
     font-size: 1.3em;
   }
 
-  &__agree-politics{
+  #create-form__agree-politics{
     max-width: 50em;
     max-height: 20em;
     overflow: auto;
